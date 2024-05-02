@@ -345,6 +345,7 @@ class TestRecipeIndex:
                 
                 new_recipe = Recipe.query.filter(Recipe.user_id == session['user_id']).first()
 
+            # breakpoint()
             assert response_json['title'] == new_recipe.title
             assert response_json['instructions'] == new_recipe.instructions
             assert response_json['minutes_to_complete'] == new_recipe.minutes_to_complete
